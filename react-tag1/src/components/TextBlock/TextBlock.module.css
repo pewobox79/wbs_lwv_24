@@ -1,0 +1,16 @@
+.textBlockSection{
+    min-height: 400px;
+    height: auto;
+    background-color: aqua;
+    border-radius: 10px;
+    width: 100%;
+    min-width: 400px;
+
+}
+
+.subTitle{
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
