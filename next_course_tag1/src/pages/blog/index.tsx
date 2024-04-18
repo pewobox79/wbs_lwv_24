@@ -2,11 +2,13 @@
 // SSR für pages router => getStaticProps
 
 import BlogItem from "@/components/Blog/BlogItem"
+import Image from "next/image"
 
 export const getStaticProps = async () => {
 
     try {
-        const res = await fetch(' https://jsonplaceholder.typicode.com/posts')
+        const res = await fetch('/api/hello')
+        console.log("res", res)
         const data = await res.json()
 
         return {
@@ -35,7 +37,12 @@ const Blog = ({ posts }: { posts: [] }) => {
 
     return <>
     <h3>Blog</h3>
-    {ListOfPosts}</>
+    {ListOfPosts}
+    <Image src={"/lv_muenster.png"} 
+    alt="landeswirtschaftsverlag haus" 
+    width={500} height={250}/>
+    
+    </>
 }
 
 

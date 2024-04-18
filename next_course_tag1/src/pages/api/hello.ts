@@ -7,7 +7,24 @@ type ResponseData = {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
+  res: NextApiResponse
 ) {
-  res.status(200).json({ message: 'Hello from Next.js!' })
+
+  if(req.method === "GET"){
+
+    let data = []
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+    .then(dataValues => console.log(dataValues) )
+
+    return res.status(200).json([])
+  } else if(req.method === "POST"){
+
+    res.status(200).json({message: "das ist ein POST"})
+  } else{
+
+    res.status(200).json({ message: 'Hello from Next.js!' })
+  }
+
+  
 }

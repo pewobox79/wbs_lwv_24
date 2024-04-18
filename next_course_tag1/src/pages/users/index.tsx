@@ -9,7 +9,7 @@ const Users = () => {
     const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
 
-        fetch(`https://jsonplaceholder.typicode.com/users`)
+        fetch(`/api/hello`)
             .then(res => res.json())
             .then(data => {
                 setIsLoading(false)

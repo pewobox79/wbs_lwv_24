@@ -17,9 +17,35 @@ https://axios-http.com/docs/example
 ## protected routes
 https://www.robinwieruch.de/react-router-private-routes/
 
-
 ## React useContext
 https://react.dev/reference/react/useContext
 
 
+## NEXTJS mit pages Router
+
+## installation
+https://nextjs.org/docs/getting-started/installation
+
+## API Routes
+https://nextjs.org/docs/pages/building-your-application/routing/api-routes
+
+
+##dynamic routes
+https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes
+
+##custom errors
+https://nextjs.org/docs/pages/building-your-application/routing/custom-error
+
+## SSR - server side rendering
+https://nextjs.org/docs/pages/building-your-application/rendering/server-side-rendering
+https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static-props
+https://nextjs.org/docs/pages/building-your-application/data-fetching/get-server-side-props
+
+## static site generation
+https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation
+https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static-paths
+
+## Client side rendering
+https://nextjs.org/docs/pages/building-your-application/rendering/client-side-rendering
+https://nextjs.org/docs/pages/building-your-application/data-fetching/client-side
 
