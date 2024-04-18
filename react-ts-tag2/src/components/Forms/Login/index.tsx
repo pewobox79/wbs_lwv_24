@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { useLocalStorage } from "../../../hooks/useLocalStorage"
+import { UserContext } from "../../../store/contextData"
 
 const INIT_VALUES = {
     username: "",
@@ -12,6 +14,11 @@ type UserType = {
 
 const Login = () => {
 
+    const myLocal = useLocalStorage("user_values")
+    console.log("my local", myLocal)
+
+    const userState = useContext(UserContext)
+
     // mit useState wird functional component STATEFUL
     const [user, setUser] = useState<UserType>(INIT_VALUES)
 
@@ -23,6 +30,8 @@ const Login = () => {
     function handleSubmit(event: { preventDefault: () => void }) {
         event.preventDefault()
         console.log("submitted", user)
+        myLocal.setStoredValue(user);
+        userState?.setUser(true)
         setUser(INIT_VALUES)
     }
 

@@ -1,0 +1,1 @@
+export type ColorPalete = "red" | "yellow" | "blue"

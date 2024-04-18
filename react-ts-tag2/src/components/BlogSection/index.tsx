@@ -1,14 +1,18 @@
-import { useEffect, useState } from "react"
 import BlogItem from "./BlogItem"
+import { useFetch } from "../../hooks/useFetch"
 
 const BlogSection = () => {
 
     const URL = 'https://jsonplaceholder.typicode.com/posts'
 
-    const [article, setArticle] = useState([])
-    const [isLoading, setIsLoading] = useState(false);
+    /* const [article, setArticle] = useState([])
+    const [isLoading, setIsLoading] = useState(false); */
 
-    useEffect(() => {
+
+    const { data, isFetchLoading, error} = useFetch(URL);
+    console.log("useFetch", data, error, isFetchLoading)
+
+    /* useEffect(() => {
         setIsLoading(true);
 
         //server response delay simulation with setTimeout() of 2sec
@@ -23,9 +27,9 @@ const BlogSection = () => {
 
         }, 2000)
 
-    }, [])
+    }, []) */
 
-    const ArticleList = article.map((item:{id: string, title:string}) => {
+    const ArticleList = data.data?.map((item:{id: string, title:string}) => {
         return <BlogItem
             key={item.id}
             id={item.id}
@@ -35,7 +39,8 @@ const BlogSection = () => {
     return (
         <div>
             <h3>BlogSection</h3>
-            {isLoading ? <p>data is Loading...</p> : ArticleList}
+            {isFetchLoading ? <p>data is Loading...</p> : ArticleList}
+            {error && <p>{error?.message}</p>}
         </div>
     )
 }

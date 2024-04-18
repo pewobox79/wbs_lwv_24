@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout";
 import LoginPage from "../pages/LoginPage";
 import BlogPage from "../pages/BlogPage";
 import SingleArticle from "../components/BlogSection/SingleArticle";
+import ProtectedRoute from "../layouts/ProtectedRoute";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -11,7 +12,7 @@ export const router = createBrowserRouter(
             <Route index element={<Homepage />} />
             <Route path="login" element={<LoginPage/>} />
 
-            <Route path="blog">
+            <Route path="blog" element={<ProtectedRoute/>}>
                 <Route index element={<BlogPage/>}/>
                 <Route path=":id" element={<SingleArticle/>}/>
             </Route>

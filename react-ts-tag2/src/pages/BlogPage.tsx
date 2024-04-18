@@ -9,6 +9,7 @@ const BlogPage = () => {
         <h3>Blogpage</h3>
         {!open ? <button onClick={()=> setOpen(true)}>add new article</button>: <BlogForm setOpen={setOpen}/>}
         <BlogSection/>
+
     </div>
 
 }
