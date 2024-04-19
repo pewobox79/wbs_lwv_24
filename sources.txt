@@ -49,3 +49,9 @@ https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static
 https://nextjs.org/docs/pages/building-your-application/rendering/client-side-rendering
 https://nextjs.org/docs/pages/building-your-application/data-fetching/client-side
 
+## GraphQL 
+## URQL Docs
+https://commerce.nearform.com/open-source/urql/docs/basics/react-preact/
+
+## Apollo React Docs
+https://www.apollographql.com/docs/react/get-started

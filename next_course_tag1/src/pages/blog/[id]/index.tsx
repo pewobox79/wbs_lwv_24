@@ -1,10 +1,11 @@
+import { revalidatePath } from "next/cache"
 
 // 1. Get Static Path für site Generation
 export const getStaticPaths = async () => {
 
     try {
 
-        const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+        const res = await fetch('http://localhost:3000/api/hello')
         const data = await res.json()
 
         const paths = data.map((item: { id: string | number }) => {
@@ -35,6 +36,7 @@ export const getStaticPaths = async () => {
 
 
 // 2. Single Article info
+
 export const getStaticProps = async (context) => {
 //context ist das object, was durch den return von getStaticPaths an getStaticProps weitergereicht wird. 
 /**
